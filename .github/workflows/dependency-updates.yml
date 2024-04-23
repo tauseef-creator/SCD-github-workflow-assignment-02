@@ -36,10 +36,8 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          head: dependency-update
+          branch: dependency-update
           base: main
           title: 'Chore: Update dependencies'
           body: |
             This pull request updates the dependencies of the project.
-            <!-- You can add more details about the update process here -->
-            <!-- You can also include a list of updated dependencies here -->
