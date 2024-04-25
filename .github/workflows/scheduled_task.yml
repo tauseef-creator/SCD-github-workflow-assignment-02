@@ -15,7 +15,6 @@ jobs:
       - name: Echo Starting Scheduled Task
         run: echo "Starting Scheduled Task..."
 
-      # Add your scheduled task steps here
       - name: Run Backup Script
         run: ./backup.sh
 

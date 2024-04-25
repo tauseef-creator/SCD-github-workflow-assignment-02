@@ -40,3 +40,5 @@ todo2
 
 #vercel deployment
 [Vercel](https://heavens-above-dusky.vercel.app/)
+
+documentation and code review on making repo public
