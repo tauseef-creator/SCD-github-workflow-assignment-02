@@ -13,8 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build and deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          branch: gh-pages
-          folder: docs
+      - name: Echo deployment message
+        run: |
+          echo "Fake deployment in progress..."
+          sleep 3
