@@ -34,7 +34,8 @@ jobs:
           git config --global user.name "GitHub Action"
           git add -f package.json package-lock.json
           git commit -m "Chore: Update dependencies"
-          git push origin HEAD:refs/heads/dependency-update
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/tauseef-creator/SCD-github-workflow-assignment-02.git HEAD:refs/heads/dependency-update
+  
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3
