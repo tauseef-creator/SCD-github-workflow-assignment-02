@@ -3,9 +3,9 @@ name: Dependency Update
 on:
   schedule:
     - cron: '0 0 * * 0' # Run every Sunday at midnight UTC
-  push:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
 
 jobs:
   update:
