@@ -26,10 +26,12 @@ jobs:
           npm install
 
       - name: Commit and push changes
-        run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git add package.json package-lock.json
-          git commit -m "Chore: Update dependencies"
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/tauseef-creator/SCD-github-workflow-assignment-02.git HEAD:refs/heads/dependency-update
+        run:
+          echo "Committing and pushing changes..."
+        # run: |
+        #   git config --global user.email "action@github.com"
+        #   git config --global user.name "GitHub Action"
+        #   git add package.json package-lock.json
+        #   git commit -m "Chore: Update dependencies"
+        #   git push https://${{ secrets.GITHUB_TOKEN }}@github.com/tauseef-creator/SCD-github-workflow-assignment-02.git HEAD:refs/heads/dependency-update
   
