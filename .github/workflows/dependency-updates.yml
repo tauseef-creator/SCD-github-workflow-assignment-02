@@ -24,6 +24,8 @@ jobs:
           npm install -g npm-check-updates
           ncu -u
           npm install
+      - name: Verify GITHUB_TOKEN
+        run: "echo GITHUB_TOKEN: ${${ secrets.GITHUB_TOKEN }::8}"
 
       - name: Commit and push changes
         run: |
