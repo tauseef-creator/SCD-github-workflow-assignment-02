@@ -24,14 +24,12 @@ jobs:
           npm install -g npm-check-updates
           ncu -u
           npm install
-      - name: Verify GITHUB_TOKEN
-        run: "echo GITHUB_TOKEN: ${${ secrets.GITHUB_TOKEN }::8}"
 
       - name: Commit and push changes
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git add -f package.json package-lock.json
+          git add package.json package-lock.json
           git commit -m "Chore: Update dependencies"
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/tauseef-creator/SCD-github-workflow-assignment-02.git HEAD:master
-        
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/tauseef-creator/SCD-github-workflow-assignment-02.git HEAD:refs/heads/dependency-update
+  
