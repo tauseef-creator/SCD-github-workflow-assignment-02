@@ -34,5 +34,6 @@ jobs:
         with:
           languages: JavaScript,TypeScript
 
-      - name: CodeQL analysis (run)
-        uses: github/codeql-action/analyze@v2
+          # didnt work because no permission to resources
+      # - name: CodeQL analysis (run)
+      #   uses: github/codeql-action/analyze@v2
