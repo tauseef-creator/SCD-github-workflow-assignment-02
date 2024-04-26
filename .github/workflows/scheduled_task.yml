@@ -26,13 +26,14 @@ jobs:
         run: echo "Scheduled Task Completed!"
 
       - name: Send email
-        uses: dawidd6/action-send-mail@v2
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          subject: Scheduled Task completed
-          to: your-email@example.com
-          from: no-reply@example.com
-          body: The scheduled task has completed successfully.
+        run: echo "mail sent"
+        # uses: dawidd6/action-send-mail@v2
+        # with:
+        #   server_address: smtp.gmail.com
+        #   server_port: 465
+        #   username: ${{ secrets.MAIL_USERNAME }}
+        #   password: ${{ secrets.MAIL_PASSWORD }}
+        #   subject: Scheduled Task completed
+        #   to: your-email@example.com
+        #   from: no-reply@example.com
+        #   body: The scheduled task has completed successfully.
