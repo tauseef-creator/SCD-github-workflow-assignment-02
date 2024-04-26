@@ -3,10 +3,10 @@ name: Scheduled Tasks
 on:
   schedule:
     - cron: '0 0 * * *' # Runs at midnight UTC every day
-  push:
-    branches:
-      - main
-      - master
+  # push:
+  #   branches:
+  #     - main
+  #     - master
 
 jobs:
   scheduled_task:
