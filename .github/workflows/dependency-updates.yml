@@ -35,14 +35,13 @@ jobs:
           git add -f package.json package-lock.json
           git commit -m "Chore: Update dependencies"
           git push https://${{ secrets.GITHUB_TOKEN }}@github.com/tauseef-creator/SCD-github-workflow-assignment-02.git HEAD:refs/heads/dependency-update
-  
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: dependency-update
-          base: main
+          base: master
           title: 'Chore: Update dependencies'
           body: |
             This pull request updates the dependencies of the project.
